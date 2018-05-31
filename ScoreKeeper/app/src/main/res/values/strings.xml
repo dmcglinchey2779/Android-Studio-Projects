@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="home_team">Home Team</string>
+    <string name="away_team">Away Team</string>
+    <string name="field_goal">Field Goal</string>
+    <string name="touchdown">Touch Down</string>
+    <string name="two_points">Safety/2 Point Conversion</string>
+    <string name="extra_point_kick">Extra Point Kick</string>
+    <string name="start_score">0</string>
+</resources>
