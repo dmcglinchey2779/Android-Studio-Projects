@@ -1,9 +1,16 @@
 package com.example.android.scorekeeper;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import static android.view.Gravity.BOTTOM;
+import static android.view.Gravity.RIGHT;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,6 +30,13 @@ public class MainActivity extends AppCompatActivity {
     public void addSixPointsTeamA(View v) {
         scoreTeamA = scoreTeamA + 6;
         displayForTeamA(scoreTeamA);
+        Context context = getApplicationContext();
+        CharSequence text = "TOUCHDOWN!!!!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+        toast.setGravity(BOTTOM|Gravity.LEFT, 0, 0);
     }
 
     /**
@@ -54,9 +68,18 @@ public class MainActivity extends AppCompatActivity {
     /**
      * Increases score by 6
      */
+    @SuppressLint("RtlHardcoded")
     public void addSixPointsTeamB(View v) {
         scoreTeamB = scoreTeamB + 6;
         displayForTeamB(scoreTeamB);
+
+        Context context = getApplicationContext();
+        CharSequence text = "TOUCHDOWN!!!!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+        toast.setGravity(Gravity.BOTTOM|Gravity.RIGHT, 0, 0);
     }
 
     /**
